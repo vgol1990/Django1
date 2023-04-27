@@ -15,17 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< Updated upstream
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-=======
 
 from women.views import *
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('women/', include('women.urls')),
->>>>>>> Stashed changes
+    path('', include('women.urls')),
 ]
+
+handler404 = pageNotFound
